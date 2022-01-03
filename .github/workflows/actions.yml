@@ -1,14 +1,19 @@
-name: JIRA Autolink Action
+name: 'Auto Actions'
 on:
   workflow_call:
-  
+    
   pull_request:
     types: [opened, ready_for_review]
 
-
 jobs:
+  add-reviews:
+    name: Auto Assign
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kentaro-m/auto-assign-action@v1.2.0
+
   link_ticket:
-    name: Link Ticket
+    name: Auto Link Ticket
     runs-on: ubuntu-latest
     steps:
       - name: Clean title
