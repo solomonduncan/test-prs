@@ -1,0 +1,11 @@
+name: 'Auto Assign PRs'
+on:
+  workflow_call:
+    
+
+jobs:
+  add-reviews:
+    name: Auto Assign
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kentaro-m/auto-assign-action@v1.2.0
