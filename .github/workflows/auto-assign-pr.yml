@@ -1,6 +1,9 @@
 name: 'Auto Assign PRs'
 on:
   workflow_call:
+  
+  pull_request:
+    types: [opened, ready_for_review]
     
 
 jobs:
